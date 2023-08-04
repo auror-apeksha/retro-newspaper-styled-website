@@ -1,0 +1,417 @@
+@font-face {
+  font-family: domaine;
+  src: url("./assets/domaine.ttf");
+}
+
+@font-face {
+  font-family: canopee;
+  src: url("./assets/canopee.ttf");
+}
+
+@font-face {
+  font-family: editorial-light;
+  src: url("./assets/editorial-light.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* We didn't give height width to main so that smooth scrolling can work on it */
+
+#main {
+  background-color: #222;
+  overflow-x: hidden;
+}
+
+#page1 {
+  height: 165vh;
+  /*Tried giving min-height but it causes issues as we don't want it to expand, we want to have flow */
+  width: 100vw;
+  background-color: #c4bcb3;
+  position: relative;
+  /* overflow-x: hidden; */
+  overflow: hidden;
+}
+
+#nav {
+  height: 110px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-bottom: 1px solid #222;
+}
+
+#nav img {
+  height: 30px;
+  width: 30%;
+}
+
+#nav h5 {
+  font-size: 20px;
+  font-weight: 100;
+  width: 30%;
+}
+
+#nav i {
+  width: 30%;
+  text-align: right;
+}
+
+#elems {
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 60px;
+}
+
+#elem1 {
+  width: 30%;
+  height: 100%;
+}
+
+#elem2 {
+  width: 30%;
+  height: 100%;
+  border-left: 2px solid #a5a5a5;
+  border-right: 2px solid #a5a5a5;
+  padding: 20px 60px;
+  text-align: center;
+}
+
+#elem3 {
+  width: 30%;
+  height: 100%;
+}
+
+#elem1 #image-div {
+  height: 60%;
+  width: 100%;
+  overflow: hidden; /*necessary so that on hover image doesn't leave container*/
+}
+
+#image-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /*works on img tag */
+  transition: all ease 0.5s; /*can't apply in hover as when mouse leaves, the transition is abrupt */
+}
+
+#image-div:hover img {
+  scale: 1.1;
+}
+
+#elem3 #image-div {
+  height: 60%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Go in Network tab, and select fonts then reload the page */
+/* Fonts can't be installed in your system in woff2 format, so get it converted in tff */
+#elem1 h4 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: canopee;
+  font-weight: 100;
+}
+
+#elem1 h4 span {
+  background-color: #b43b12;
+  font-size: 18px;
+  padding: 4px;
+  color: #c4bcb3;
+  font-weight: 100;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+#elem1 p {
+  font-size: 23px;
+  font-family: domaine;
+  font-weight: 100;
+  color: #656565;
+}
+
+#elem3 h4 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: canopee;
+  font-weight: 100;
+}
+
+#elem3 h4 span {
+  background-color: #b43b12;
+  font-size: 18px;
+  padding: 4px;
+  color: #c4bcb3;
+  font-weight: 100;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+#elem3 p {
+  font-size: 23px;
+  font-family: domaine;
+  font-weight: 100;
+  color: #656565;
+}
+
+#elem2 h2 {
+  font-family: canopee;
+  font-size: 75px;
+  font-weight: 100;
+}
+
+#elem2 h3 {
+  font-family: domaine;
+  font-size: 30px;
+  font-weight: 100;
+  margin: 20px 0;
+  color: #2f2f2f;
+}
+
+#elem2 h6 {
+  font-family: domaine;
+  font-size: 20px;
+  font-weight: 100;
+  color: #2f2f2f;
+}
+
+#page1 h1 {
+  font-size: 450px;
+  font-family: canopee;
+  font-weight: 100;
+  background-color: #1c1c19;
+  color: #c4bcb3;
+  line-height: 350px;
+  width: 94%;
+  margin-left: 3%;
+  letter-spacing: -25px;
+  margin-top: 50px;
+  padding-left: 30px;
+}
+
+#page2 {
+  height: 130vh;
+  width: 100%;
+  background-color: #c4bcb3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+
+#page2-left {
+  height: 100%;
+  width: 35%;
+  padding-right: 40px;
+  border-right: 1px solid #4b4b4b;
+}
+
+#page2-left h2 {
+  font-size: 85px;
+  font-family: canopee;
+  line-height: 120px;
+  font-weight: 100;
+}
+
+#page2-left span {
+  font-size: 150px;
+  font-weight: 900;
+}
+
+#page2-left img {
+  height: 40%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#page2-left p {
+  font-size: 28px;
+  font-family: domaine;
+  color: #2f2f2f;
+  margin-top: 20px;
+}
+
+#page2-right {
+  height: 100%;
+  width: 70%;
+  padding: 0 50px;
+}
+
+#page2-right img {
+  height: 40%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#page2-right h1 {
+  font-size: 88px;
+  font-weight: 100;
+  letter-spacing: -1px;
+  font-family: canopee;
+}
+
+#page3 {
+  padding-bottom: 100px;
+  position: relative;
+  background-color: #c4bcb3;
+}
+
+#page3 h1 {
+  font-size: 300px;
+  background-color: #1c1c19;
+  width: fit-content;
+  color: #c4bcb3;
+  font-family: canopee;
+  margin-left: 2%;
+  padding: 0 20px;
+  line-height: 280px;
+}
+
+#page3 img {
+  height: 300px;
+  position: absolute;
+  top: -6%;
+  right: 5%;
+}
+
+#page4 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #c4bcb3;
+  justify-content: space-between;
+}
+
+#page4-left {
+  width: 60%;
+  height: 100%;
+  padding: 40px;
+}
+
+#page4-left img {
+  height: 80%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#page4-right {
+  width: 40%;
+  height: 100%;
+  padding: 40px;
+}
+
+#page4-right p {
+  font-size: 28px;
+  font-weight: 100;
+  font-family: domaine;
+  color: #2f2f2f;
+  margin-bottom: 50px;
+  line-height: 35px;
+}
+
+#page4-right #oval-cta {
+  height: 150px;
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid #222;
+  background-color: #cac1b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow: hidden; /*So to hide h1 when transfromed on hover */
+}
+
+#oval-cta h1 {
+  font-size: 50px;
+  font-weight: 100;
+  font-family: canopee;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-40%);
+  transition: all ease 0.5s;
+}
+
+#oval-cta img {
+  height: 60px;
+  transform: translateX(-120%);
+  transition: all ease 0.5s;
+}
+
+#oval-cta:hover img {
+  transform: translateX(60%);
+}
+
+#oval-cta:hover h1 {
+  transform: translateX(100%);
+}
+
+#page5 {
+  padding: 25px 0;
+  width: 100%;
+  background-color: #c4bcb3;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-top: 1px solid #2f2f2f;
+  border-bottom: 1px solid #2f2f2f;
+}
+
+#page5::-webkit-scrollbar {
+  display: none;
+}
+
+#page5 h1 {
+  font-size: 60px;
+  font-weight: 100;
+  font-family: domaine;
+  display: inline-block;
+  margin-right: 12px;
+  animation-timing-function: linear;
+  animation: scroll 2s;
+  animation-iteration-count: infinite;
+}
+
+#page5 h1 span {
+  background-color: #1b1b1b;
+  font-family: canopee;
+  color: #c4bcb3;
+  padding: 0 15px;
+}
+
+#page6 {
+  height: 50vh;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 16px));
+  }
+}
+
+#page5:hover h1 {
+  animation-play-state: paused;
+}
